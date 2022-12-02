@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+    <html lang="Pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/logo.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title>Hipertrofia</title>
+    </head>
+    <body>
+     
+     
+      <!--Header do site-->
+      <nav class="navbar">
+        <div class="content">
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="#HOME">Home</a></li>
+            <li><a href="#PQS">Pesquisa</a></li>
+            <li><a href="#CALCU">Calculadora</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      </div>
+      
+      
+      <!--Home onde fica o início do site-->
+      <div class="home" id="HOME">
+         <div class="home_txt">
+             <h1>Academy</h1>
+      <div class="home__shadow"></div>
+        </div>
+      </div>
+
+
+      <!--Cards onde estão localizados as pesquisas-->       
+      <div class="pesquisa">
+        <h2>Hipertrofia Muscular🏋🏿</h2></div>
+          <div class="boxe" id="PQS" >
+            <div class="card">
+            <div class="align">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <h1>O que é?</h1>
+            <p>
+              Hipertrofia muscular é o aumento do volume dos músculos, que ocorre quando a síntese de proteínas musculares é maior que a taxa de degradação natural dessas mesmas proteínas.
+            </p>
+      </div>
+      <div class="card">
+            <div class="align">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+        
+            <h1>Como é gerado?</h1>
+            <p>
+              Hipertrofia muscular é o aumento do volume dos músculos, que ocorre quando a síntese de proteínas musculares é maior que a taxa de degradação natural dessas mesmas proteínas.
+            </p>
+      </div>
+      <div class="card">
+            <div class="align">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+        
+            <h1>Qual a melhor forma de treino para hipertrofia?</h1>
+            <p>
+              O HIIT — ou treinamento intervalado de alta intensidade — é uma das melhores maneiras de ganhar músculos rápido e atingir a hipertrofia. Cada treino dura apenas 45 minutos e deve ser praticado apenas duas vezes na semana. No entanto, ele é superintenso, pois exige que o máximo de esforço dos músculos.
+          </p>
+        </div>
+      </div>
+
+
+      
+
+      <!--conidiano e o saturno feito em css-->
+      <div class="about">
+        <div class="contentBx">
+          <h2>Cotidiano:</h2>
+            <p>A disposição semanal segue assim:
+              Segunda feira: Costas, Trapézio e Bíceps (A)
+              Terça feira: Peito, Deltoide Lateral e Abdômen (B)
+              Quarta feira: Pernas e Panturrilhas (C)
+              Quinta feira: Ombros e Trapézio (D)
+              Sexta feira: Braços, Abdômen e Panturrilhas (E)
+              Sábado/Domingo: Descanso.</p>
+              </div>
+                <a class="planet">🏋🏿</a>
+       </div>
+       
+       
+       <!--cauculadora-->
+       <div class="calc" id="CALCU">
+        <div class="calctx">
+         <h2>Calcule seu peso</h2>
+         <p>(peso dividido pela altura ao quadrado)</p>
+          </div>
+        <div class="Calculadora">
+        <form action="" class="calculator" name="calc">
+         <input type="text" name="txt" class="value"/>
+         <span class="num clear" onclick="calc.txt.value =''">c</span>
+         <span onclick="document.calc.txt.value +='/'">/</span>
+         <span onclick="document.calc.txt.value +='-'">-</span>
+         <span onclick="document.calc.txt.value +='7'">7</span>
+         <span onclick="document.calc.txt.value +='8'">8</span>
+         <span onclick="document.calc.txt.value +='9'">9</span>
+         <span onclick="document.calc.txt.value +='*'">*</span>
+         <span onclick="document.calc.txt.value +='4'">4</span>
+         <span onclick="document.calc.txt.value +='5'">5</span>
+         <span onclick="document.calc.txt.value +='6'">6</span>
+         <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+         <span onclick="document.calc.txt.value +='1'">1</span>
+         <span onclick="document.calc.txt.value +='2'">2</span>
+         <span onclick="document.calc.txt.value +='3'">3</span>
+         <span onclick="document.calc.txt.value +='0'">0</span>
+         <span onclick="document.calc.txt.value +='.'">.</span>
+         <span onclick="document.calc.txt.value +='00'">00</span>
+         <span class="numequal" onclick="document.calc.txt.value =calculation(calc.txt.value)">=</span>
+         </form>
+         <div id="history">
+         <h3>Historico:</h3>
+         <div id="result"></div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+                
+        <!--cards sobre a equipe-->
+        
+   
+  
+  <!--o footer-->
+   <footer>
+         <div class="main-content">
+             <div class="left box">
+                <h2>SENAI</h2>
+                 <div class="content">
+                   <p>Matheus Trevisan 2A</p>
+                   </div>
+                  </div>
+                  
+  </footer>
+
+
+              <!--Script para mandar e excluir do loca-Storage os cauculos da calculadora-->
+              <script type="text/javascript">
+
+                let allResult = JSON.parse(localStorage.getItem('allResult')) || []; 
+                showData();
+              
+                function deleteResult( key ){
+                allResult.slice(key , 1);
+              
+                const datafiltered =allResult.filter((e, i)=> i != key);
+                localStorage.setItem('allResult', JSON.stringify(datafiltered));
+                allResult = datafiltered;
+              
+                window.location.reload(true);
+              }
+              function showData(){
+                let resultdiv = document.getElementById('result')
+              
+                allResult.map((e, i) => {
+                  resultdiv.innerHTML = `<div class="d-flex">
+                    <p> ${e.result}'</p>
+                    <button onclick="deleteResult(${i})" >Excluir</button>
+                    `;
+                  })
+                }
+                function calculation(v)
+                {
+                  para = document.createElement('p');
+                  data = v + '=' + eval(v);
+              
+                  allResult.push({result : data});
+                  localStorage.setItem("allResult", JSON.stringify(allResult));
+                  allResult = JSON.parse(localStorage.getItem('allResult'));
+                  window.location.reload(true);
+                }
+              </script>
+              
+              
+               <!--Configuração da nav-bar para celular-->
+              <script>
+                const body = document.querySelector("body");
+                const navbar = document.querySelector(".navbar");
+                const menuBtn = document.querySelector(".menu-btn");
+                const cancelBtn = document.querySelector(".cancel-btn");
+                menuBtn.onclick = ()=>{
+                  navbar.classList.add("show");
+                  menuBtn.classList.add("hide");
+                  body.classList.add("disabled");
+                }
+                cancelBtn.onclick = ()=>{
+                  body.classList.remove("disabled");
+                  navbar.classList.remove("show");
+                  menuBtn.classList.remove("hide");
+                }
+                window.onscroll = ()=>{
+                  this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+                }
+              </script>
+
+
+              <!--Icones dos card e footer-->
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+              <!--Movimeto dos cards-->
+              <script type="text/javascript" src="./js/three.js"></script>
+              <script>VanillaTilt.init(document.querySelectorAll(".cards"), {
+                  max: 25,
+                  speed:300,
+              });
+          </script>
+          <script src="/js/three.js"></script>
+    </body>
+</html>
