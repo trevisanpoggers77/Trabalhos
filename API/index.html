@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Perfil do GitHub</h1>
+
+        <input type="text" id="usernameInput" placeholder="Digite o nome de usuário">
+
+        <button class="btn" onclick="buscarPerfil()">Buscar</button>
+
+        <div id="perfilInfo"></div>
+
+    </div>
+
+   
+
+    <style>
+
+        body {
+
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            background: #0f0c29;
+
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+
+            padding: 80px;
+
+        }
+
+
+        .container {
+
+            max-width: 400px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+            color: white;
+
+        }
+
+
+        input[type="text"] {
+
+            width: 100%;
+
+            padding: 10px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 4px;
+
+            box-sizing: border-box;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .btn {
+
+            background-color: rgb(28, 27, 77) ;
+
+            color: white;
+
+            padding: 10px 20px;
+
+            border: none;
+
+            border-radius: 4px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            width: 100%;
+
+        }
+
+
+        .btn:hover {
+
+            background-color: rgb(98, 98, 196) ;
+
+        }
+
+
+        #perfilInfo {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+        }
+
+
+        #perfilInfo img {
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            margin-bottom: 10px;
+
+        }
+
+    </style>
+
+
+    <script>
+
+        function buscarPerfil() {
+
+            const usernameInput = document.getElementById('usernameInput');
+
+            const username = usernameInput.value.trim();
+
+
+            if (username.length === 0) {
+
+                alert('Por favor, digite um nome de usuário válido.');
+
+                return;
+
+            }
+
+
+            fetch(`https://api.github.com/users/${username}`)
+
+                .then(response => response.json())
+
+                .then(data => {
+
+                    const perfilInfo = document.getElementById('perfilInfo');
+
+
+                    if (data.message === 'Not Found') {
+
+                        perfilInfo.innerHTML = '<p>Perfil não encontrado.</p>';
+
+                    } else {
+
+                        const perfilHtml = `
+
+                            <img src="${data.avatar_url}" alt="Imagem de Perfil">
+
+                            <h2>${data.name}</h2>
+
+                            <p>Usuário: ${data.login}</p>
+
+                            <p>Localização: ${data.location}</p>
+
+                            <p>Biografia: ${data.bio}</p>
+
+                            <p>Número de seguidores: ${data.followers}</p>
+
+                            <p>Número de repositórios: ${data.public_repos}</p>
+
+                            <a href="https://github.com/${data.login}" target="_blank">Ver Repositórios</a>
+
+                        `;
+
+                        perfilInfo.innerHTML = perfilHtml;
+
+                    }
+
+                })
+
+                .catch(error => {
+
+                    console.error(error);
+
+                    alert('Erro ao buscar o perfil do GitHub.');
+
+                });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
